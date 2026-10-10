@@ -1,0 +1,9 @@
+services:
+  synapse:
+    image: ghcr.io/element-hq/synapse:latest
+    container_name: matrix-synapse
+    restart: unless-stopped
+    volumes:
+      - ./synapse-data:/data
+    ports:
+      - "127.0.0.1:8008:8008"
